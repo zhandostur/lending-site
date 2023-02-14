@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<form action="{% url 'thanks' %}" method="">
+    <label>имя</label>
+    <input name="name">
+    <label>телефон</label>
+    <input name="phone">
+    <button type="submit">отправить</button>
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% if object_list %}
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Дата</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+        </tr>
+        {% for object in object_list %}
+        <tr>
+            <th>{{object.id}}</th>
+            <th>{{object.order_dt}}</th>
+            <th>{{object.order_name}}</th>
+            <th>{{object.order_phone}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+Нет данных
+{% endif %}
+</body>
+</html>
