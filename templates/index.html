@@ -14,7 +14,8 @@
 <br>
 
 
-<form action="{% url 'thanks' %}" method="">
+<form action="{% url 'thanks' %}" method="POST">
+    {% csrf_token %}
     <label>имя</label>
     <input name="name">
     <label>телефон</label>
