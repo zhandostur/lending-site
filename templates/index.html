@@ -13,13 +13,16 @@
 <br>
 <br>
 
+<style>
+    .css_input {
+    color: yellow;
+    background-color: red;
+    }
+</style>
 
 <form action="{% url 'thanks' %}" method="POST">
     {% csrf_token %}
-    <label>имя</label>
-    <input name="name">
-    <label>телефон</label>
-    <input name="phone">
+    {{ form.as_p }}
     <button type="submit">отправить</button>
 </form>
 
