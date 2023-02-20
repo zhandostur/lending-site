@@ -20,6 +20,7 @@ def first_page(request):
         'pc_3': pc_3,
         'price_table': price_table,
         'form': form,
+        'title': 'lending page'
     }
     return render(request, 'index.html', context)
 
@@ -34,6 +35,7 @@ def thanks_page(request):
         context = {
             'name': name,
             'phone': phone,
+            'title': 'thanks page'
         }
         return render(request, 'thanks.html', context)
     else:
