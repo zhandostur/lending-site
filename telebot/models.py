@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class TeleSettings(models.Model):
     tg_token = models.CharField(max_length=258, verbose_name='Токен')
     tg_chat = models.CharField(max_length=258, verbose_name='Чат айди')
