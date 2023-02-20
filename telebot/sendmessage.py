@@ -29,7 +29,6 @@ def send_telegram(tg_name, tg_phone):
             })
         except:
             pass
-
         finally:
             if req.status_code != 200:
                 print('Ошибка отправки!')
