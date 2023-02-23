@@ -2,8 +2,6 @@ import requests
 from .models import TeleSettings
 
 
-
-
 def send_telegram(tg_name, tg_phone):
     if TeleSettings.objects.get(pk=2):
         settings = TeleSettings.objects.get(pk=2)
